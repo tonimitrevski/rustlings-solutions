@@ -11,7 +11,7 @@ pub fn generate_nametag_text(name: String) -> Option<String> {
         Some(format!("Hi! My name is {}", name))
     } else {
         // Empty names aren't allowed.
-        None
+        None("`name` was empty; it must be nonempty.")
     }
 }
 
