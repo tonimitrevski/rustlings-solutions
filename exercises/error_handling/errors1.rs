@@ -11,7 +11,7 @@ pub fn generate_nametag_text(name: String) -> Option<String> {
         Some(format!("Hi! My name is {}", name))
     } else {
         // Empty names aren't allowed.
-        None("`name` was empty; it must be nonempty.")
+        None
     }
 }
 
@@ -34,7 +34,7 @@ mod tests {
     fn explains_why_generating_nametag_text_fails() {
         assert_eq!(
             generate_nametag_text("".into()),
-            Err("`name` was empty; it must be nonempty.".into())
+            None
         );
     }
 }
